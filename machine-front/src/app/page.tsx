@@ -1,6 +1,50 @@
+import { getAllMachines, createNewMachine, updateExistingMachine, deleteExistingMachine } from "@/services/machines/api/machineService";
 import Image from "next/image";
 
 export default function Home() {
+
+  getAllMachines().then(machines => {
+    console.log("Machines fetched successfully:", machines);
+  })
+    .catch(error => {
+      console.error("Error fetching machines:", error);
+    });
+
+  createNewMachine({ name: "Milling Machine", type: "CNC" })
+    .then(newMachine => {
+      console.log("New machine created successfully:", newMachine);
+    })
+    .catch(error => {
+      console.error("Error creating new machine:", error);
+    });
+
+  updateExistingMachine("1", { name: "Updated Lathe", type: "CNC" })
+    .then(updatedMachine => {
+      console.log("Machine updated successfully:", updatedMachine);
+    })
+    .catch(error => {
+      console.error("Error updating machine:", error);
+    });
+
+
+  deleteExistingMachine("2")
+    .then(response => {
+      console.log("Machine deleted successfully:", response);
+    })
+    .catch(error => {
+      console.error("Error deleting machine:", error);
+    });
+
+  getAllMachines()
+    .then(machines => {
+      console.log("Machines after operations:", machines);
+    })
+    .catch(error => {
+      console.error("Error fetching machines after operations:", error);
+    });
+
+
+
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
