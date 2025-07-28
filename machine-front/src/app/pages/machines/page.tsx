@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Box from "@mui/joy/Box";
-import Button from "@mui/joy/Button";
 import Breadcrumbs from "@mui/joy/Breadcrumbs";
 import MuiLink from "@mui/joy/Link"; 
 import Typography from "@mui/joy/Typography";
@@ -10,7 +9,6 @@ import Link from "next/link";
 
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import PrintIcon from '@mui/icons-material/Print';
 
 
 import Sidebar from "@/components/MachineMui/Sidebar";
@@ -57,17 +55,8 @@ export default function HomePage() {
             >
               <HomeRoundedIcon />
             </MuiLink>
-            <MuiLink
-              component={Link}
-              underline="hover"
-              color="neutral"
-              href="/dashboard" 
-              sx={{ fontSize: 12, fontWeight: 500 }}
-            >
-              Dashboard
-            </MuiLink>
             <Typography color="primary" sx={{ fontWeight: 500, fontSize: 12 }}>
-              Orders
+              Disponíveis
             </Typography>
           </Breadcrumbs>
         </Box>
@@ -85,14 +74,6 @@ export default function HomePage() {
           <Typography level="h2" component="h1">
             Máquinas Disponíveis
           </Typography>
-            <Button
-            onClick={() => window.print()}
-            color="primary"
-            startDecorator={<PrintIcon />}
-            size="sm"
-            >
-            Imprimir
-            </Button>
         </Box>
         <MachineTable />
       </Box>
