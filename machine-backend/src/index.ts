@@ -5,9 +5,8 @@ import machineRoutes from "./routes/machineRoutes";
 const app = express();
 
 app.use(cors({
-  origin: '192.168.18.219:3000', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+origin: "*",
+methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
 app.use(express.json());
