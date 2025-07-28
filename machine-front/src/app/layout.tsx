@@ -5,7 +5,7 @@ import MuiProvider from "../components/providers/MuiProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sistema de Gerenciamento de Máquinas",
+  title: "Gerenciamento de Maquinas",
   description: "Sistema para gerenciar máquinas de forma eficiente criado com Next.js e React Query.",
 };
 
