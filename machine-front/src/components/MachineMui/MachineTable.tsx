@@ -5,9 +5,6 @@ import * as React from "react";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Divider from "@mui/joy/Divider";
-import FormControl from "@mui/joy/FormControl";
-import FormLabel from "@mui/joy/FormLabel";
-import Input from "@mui/joy/Input";
 import Modal from "@mui/joy/Modal";
 import ModalDialog from "@mui/joy/ModalDialog";
 import Table from "@mui/joy/Table";
@@ -16,7 +13,6 @@ import DialogTitle from "@mui/joy/DialogTitle";
 import DialogContent from "@mui/joy/DialogContent";
 import DialogActions from "@mui/joy/DialogActions";
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
-import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 
 import MachineRow from "./MachineRow";
@@ -69,13 +65,6 @@ export default function MachineTable() {
 
     return (
         <>
-            <Box sx={{ display: "flex", alignItems: "center", py: 2, gap: 1.5, flexWrap: "wrap" }}>
-                <FormControl sx={{ flex: 1 }} size="sm">
-                    <FormLabel>Buscar por máquina</FormLabel>
-                    <Input size="sm" placeholder="Buscar" startDecorator={<SearchIcon />} />
-                </FormControl>
-            </Box>
-
             <Sheet
                 className="MachineTableContainer"
                 variant="outlined"

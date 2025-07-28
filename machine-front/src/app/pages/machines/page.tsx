@@ -8,12 +8,11 @@ import MuiLink from "@mui/joy/Link";
 import Typography from "@mui/joy/Typography";
 import Link from "next/link";
 
-// Ícones
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
+import PrintIcon from '@mui/icons-material/Print';
 
-// Componentes da UI
+
 import Sidebar from "@/components/MachineMui/Sidebar";
 import Header from "@/components/MachineMui/Header";
 import MachineTable from "@/components/MachineMui/MachineTable";
@@ -86,13 +85,14 @@ export default function HomePage() {
           <Typography level="h2" component="h1">
             Máquinas Disponíveis
           </Typography>
-          <Button
+            <Button
+            onClick={() => window.print()}
             color="primary"
-            startDecorator={<DownloadRoundedIcon />}
+            startDecorator={<PrintIcon />}
             size="sm"
-          >
+            >
             Imprimir
-          </Button>
+            </Button>
         </Box>
         <MachineTable />
       </Box>
