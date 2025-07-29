@@ -8,6 +8,7 @@ export const getMaquina = async (req: Request, res: Response, next: NextFunction
    res.status(200).json({
       statusCode: 200,
       message: "Listagem concluida com sucesso",
+      machines
      
     });
   } catch (error) {
