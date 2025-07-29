@@ -6,10 +6,11 @@ import { machineIdSchemas } from "../schemas/machineIdSchemas";
 
 const router = Router();
 
-router.get("/machines", machineController.getListar);
-router.post("/machines", zodValidator(createMachineSchema), machineController.newMaquina);
-router.put("/machines/:id", zodValidator(createMachineSchema), machineController.update);
-router.delete("/machines/:id", zodValidator(machineIdSchemas), machineController.deleteMaquina);
+router
+.get("/", machineController.getMaquina)
+.post("/", zodValidator(createMachineSchema), machineController.newMaquina)
+.put("/:id", zodValidator(createMachineSchema), machineController.updateMaquina)
+.delete("/:id", zodValidator(machineIdSchemas), machineController.deleteMaquina);
 
 export default router;
 

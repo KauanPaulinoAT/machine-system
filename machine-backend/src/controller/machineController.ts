@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import * as machineService from "../services/machineService";
 
-export const getListar = async (req: Request, res: Response) => {
+export const getMaquina = async (req: Request, res: Response) => {
   try {
-    const machines = await machineService.getListar();
+    const machines = await machineService.getMaquina();
     res.status(200).json(machines);
   } catch (error) {
     console.error("Erro ao realizar listagem ", error)
@@ -21,11 +21,11 @@ export const newMaquina = async (req: Request, res: Response) => {
 
 };
 
-export const update = async (req: Request, res: Response) => {
+export const updateMaquina = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { name, tipo } = req.body;
-    const machine = await machineService.update(id, { name, tipo });
+    const machine = await machineService.updateMaquina(id, { name, tipo });
     res.json(machine);
   } catch (error) {
     console.log("Erro ao atualizar maquina", error)
