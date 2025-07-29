@@ -7,4 +7,10 @@ export const createMachineSchema = z.object({
   }),
 });
 
+export const machineIdSchemas = z.object({
+  params: z.object({
+    id: z.string().uuid(), 
+  }),
+});
+
 
