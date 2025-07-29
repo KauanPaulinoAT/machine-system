@@ -1,9 +1,8 @@
 import { Router } from "express";
 import { createMachineSchema } from "../schemas/machineSchemas";
+import { machineIdSchemas } from "../schemas/machineSchemas";
 import { zodValidator } from "../middleware/zodValidator";
 import * as machineController from "../controller/machineController";
-import { machineIdSchemas } from "../schemas/machineIdSchemas";
-
 const router = Router();
 
 router
