@@ -12,9 +12,9 @@ export const zodValidator =
       if (!result.success) {
         res.status(400).json({
           statusCode: 400,
-          message: 'Dados incorretos ou null'
+          message: 'Dados incorretos ou null',
         });
         return;
       }
       next();
-    }
+    } 

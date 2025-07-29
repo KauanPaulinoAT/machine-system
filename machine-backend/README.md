@@ -13,19 +13,19 @@ Este repositório corresponde ao back-end da aplicação, responsável por toda 
 
 #### GET:
 ````doc
-http://localhost:3333/machine
+http://localhost:3333/machines
 ````
 #### POST:
 ````doc
-http://localhost:3333/machine
+http://localhost:3333/machines
 ````
 #### PUT:
 ````doc
-http://localhost:3333/machine/:id
+http://localhost:3333/machines/:id
 ````
 #### DELETE:
 ````doc
-http://localhost:3333/machine/:id
+http://localhost:3333/machines/:id
 ````
 #### Como rodar o projeto localmente
 - clone o repositorio
