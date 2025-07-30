@@ -2,14 +2,17 @@ import { Machine, CreateMachine, UpdateMachine } from "./types";
 import { API_BASE_URL } from "@/lib/api";
 
 export async function getAllMachines(): Promise<Machine[]> {
-    const response = await fetch(`${API_BASE_URL}/machines`);
+  const response = await fetch(`${API_BASE_URL}/machines`);
 
-    if (!response.ok) {
-        throw new Error(`Erro ao obter lista de máquinas: ${response.statusText}/machines`);
-    }
-    
-    return response.json();
+  if (!response.ok) {
+    throw new Error("Erro ao obter lista de máquinas");
+  }
+
+  const data = await response.json();
+
+  return data.machines; 
 }
+
 
 export async function createNewMachine(machineToCreate: CreateMachine): Promise<Machine> {
     const response = await fetch(`${API_BASE_URL}/machines`, {
